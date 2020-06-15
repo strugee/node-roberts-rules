@@ -1,0 +1,24 @@
+{
+  "name": "roberts-rules",
+  "version": "1.0.0",
+  "description": "Robert's Rules of Order engine for JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strugee/node-roberts-rules.git"
+  },
+  "keywords": [
+    "roberts-rules",
+    "roberts-rules-of-order",
+    "parliamentary-procedure"
+  ],
+  "author": "AJ Jordan <alex@strugee.net>",
+  "license": "LGPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/strugee/node-roberts-rules/issues"
+  },
+  "homepage": "https://github.com/strugee/node-roberts-rules#readme"
+}
