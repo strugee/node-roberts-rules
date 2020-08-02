@@ -4,7 +4,7 @@
   "description": "Robert's Rules of Order engine for JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc -r lcov perjury test.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/strugee/node-roberts-rules/issues"
   },
-  "homepage": "https://github.com/strugee/node-roberts-rules#readme"
+  "homepage": "https://github.com/strugee/node-roberts-rules#readme",
+  "devDependencies": {
+    "coveralls": "^3.1.0",
+    "nyc": "^15.1.0",
+    "perjury": "^1.1.4"
+  }
 }
