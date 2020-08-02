@@ -59,8 +59,9 @@ vows.describe('roberts-rules module').addBatch({
 				},
 				'Alice and Bob are in the attendee list': function(err, meeting) {
 					assert.equal(meeting.attendeeList.length, 2);
-					assert.includes(meeting.attendeeList, 'Alice');
-					assert.includes(meeting.attendeeList, 'Bob');
+					// TODO figure out why assert.includes() doesn't work here
+					assert(meeting.attendeeList.includes('Alice'));
+					assert(meeting.attendeeList.includes('Bob'));
 				}
 			}
 		}
