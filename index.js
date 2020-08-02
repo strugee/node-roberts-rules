@@ -24,7 +24,7 @@ module.exports = function robertsRulesFactory() {
 			var l = this.attendeeList;
 
 			if (l.indexOf(member) === -1) {
-				this.attendeeList.push(member);
+				l.push(member);
 			}
 		},
 		removeAttendee(member) {
@@ -37,9 +37,24 @@ module.exports = function robertsRulesFactory() {
 		},
 
 		// Speaker list
-		queueSpeaker() {},
-		dequeueSpeaker() {},
-		ackSpeaker() {},
+		queueSpeaker(speaker) {
+			var l = this.speakerList;
+
+			if (l.indexOf(speaker) === -1) {
+				l.push(speaker);
+			}
+		},
+		dequeueSpeaker(speaker) {
+			var l = this.speakerList,
+			    idx = l.indexOf(speaker);
+
+			if (idx > -1) {
+				l.splice(idx, 1);
+			}
+		},
+		ackSpeaker(speaker) {
+			this.dequeueSpeaker(speaker);
+		},
 		yieldSpeaker() {},
 
 		// Motions
